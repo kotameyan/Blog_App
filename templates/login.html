@@ -1,21 +1,32 @@
-{% extends "base.html" %}
+{% extends "bootstrap/base.html" %}
 {% block content %}
 
-<h1>ログイン画面</h1>
+<div class="container">
+    <div class="text-center">
+        <h1>ログイン画面</h1>
+        <hr>
 
-<form method="POST">
-    <label for="username">ユーザー名</label>
-    <input type="text" name="username">
+        <form method="POST" class="container">
+            <div class="mb-3">
+                <label for="username">ユーザー名</label>
+                <input type="text" name="username">
+            </div>
 
-    <label for="password">パスワード</label>
-    <input type="password" name="password">
+            <div class="mb-3">
+                <label for="password">パスワード</label>
+                <input type="password" name="password">
+            </div>
 
-    <input type="submit" value="ログイン">
-</form>
+            <input type="submit" class="btn btn-primary" value="ログイン">
+        </form>
 
-<hr>
+        <hr>
 
-<p>まだアカウントを持っていませんか？</p>
-<a href="/signup" role="button">新規ユーザー登録</a>
+        <div class="container">
+            <p>まだアカウントを持っていませんか？</p>
+            <a href="/signup" class="btn btn-primary" role="button">新規ユーザー登録</a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

@@ -1,13 +1,17 @@
-{% extends "base.html" %}
+{% extends "bootstrap/base.html" %}
 {% block content %}
 
-<h1>ブログアプリケーションへようこそ</h1>
+<div class="text-center">
+    <div class="container">
+        <h1>ブログアプリケーションへようこそ</h1>
 
-<h2>利用にはユーザー登録が必要です。</h2>
+        <h2>利用にはユーザー登録が必要です。</h2>
 
-<p>すでにアカウントをお持ちですか？</p>
-<a href="/login" role="button">ログイン</a>
+        <p>すでにアカウントをお持ちですか？</p>
+        <a href="/login" class="btn btn-primary" role="button">ログイン</a>
 
-<p>まだアカウントを持っていませんか？</p>
-<a href="/signup" role="button">新規ユーザー登録</a>
+        <p>まだアカウントを持っていませんか？</p>
+        <a href="/signup" class="btn btn-primary" role="button">新規ユーザー登録</a>
+    </div>
+</div>
 {% endblock %}
