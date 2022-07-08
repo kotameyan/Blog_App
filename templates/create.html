@@ -1,16 +1,29 @@
 {% extends "bootstrap/base.html" %}
 {% block content %}
 
-<h1>記事を新規作成</h1>
+<div class="container">
+    <div class="text-center">
+        <h1>記事を新規作成</h1>
+        <hr>
 
-<form method="POST">
-    <label for="title">タイトル</label>
-    <input type="text" name="title">
+        <form method="POST" class="container">
 
-    <label for="body">内容</label>
-    <input type="text" name="body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">タイトル</label>
+                <input type="text" name="title" class="form-control">
+            </div>
 
-    <input type="submit" value="作成">
-</form>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">内容</label>
+                <textarea type="text" name="body" class="form-control" rows="10"></textarea>
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="作成">
+            <a href="/home" class="btn btn-primary" role="button">キャンセル</a>
+
+        </form>
+
+    </div>
+</div>
 
 {% endblock %}

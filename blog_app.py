@@ -62,7 +62,7 @@ def signup():
 
         db.session.add(user)
         db.session.commit()
-        return redirect('/login')
+        return redirect('/')
 
     else:
         return render_template('signup.html')
@@ -89,7 +89,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect('login')
+    return redirect('/')
 
 
 @app.route('/create', methods = ['GET','POST'])
